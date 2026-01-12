@@ -18,7 +18,7 @@ def driver():
     yield driver
 
     driver.quit()
-
+# Tests
 def test_print_main_title_text(driver):
     driver.get("https://www.kimmoahola.net/selenium.html")
     main_title = driver.find_element(By.ID, "main-title")
