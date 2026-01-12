@@ -31,11 +31,11 @@ jobs:
 
       - name: Run Selenium tests
         run: |
-          pytest -s
+          pytest -s --junitxml=junit/test-results-3.11.xml
 
-      - name: Upload test reports
+      - name: Upload pytest test results
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: surefire-reports
-          path: target/surfire-reports/
+          name: pytest-results-3.11
+          path: junit/test-results-3.11.xml
