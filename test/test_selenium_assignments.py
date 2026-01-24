@@ -5,7 +5,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.select import Select
 
-@pytest.fixture(scope="module")
+@pytest.fixture()
 def driver():
     options = webdriver.ChromeOptions()
     if os.getenv("CI") == "true":
